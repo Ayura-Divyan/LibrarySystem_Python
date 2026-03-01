@@ -53,5 +53,7 @@ def load_student():
 #Start script
 if __name__ == "__main__":
     load_book()
+    load_student()
 
     print(books)
+    print(student)
