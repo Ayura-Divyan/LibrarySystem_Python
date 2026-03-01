@@ -5,8 +5,10 @@ books = {} #Initialised a books dictionary to store the loaded book data
 def load_book():
     """Used to load the csv files into python memory"""
     try:
-        with open('../data/book.csv') as csvfile:
+        with open('../data/book.csv', encoding="utf-8") as csvfile:
             reader = csv.reader(csvfile) #Loads the csv file into a variable
+
+            next(reader) #Skips the header row
 
             for row in reader:
                 #Initialise the rows to separate indexes
