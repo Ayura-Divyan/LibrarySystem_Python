@@ -25,11 +25,14 @@ def load_book():
 
                     #Initialise dictionary
                     books[book_id] = {"title": title, "isbn": isbn, "copies": int(copies), "availability": availability, "price": float(price)}
-
+                else:
+                    raise ValueError
             print("Books loaded")
             return books
     except FileNotFoundError: #Catch
         print("Books file not found")
+    except ValueError:
+        print("Columns exceeded (expected 6 columns)")
 
 def load_student():
     """Used to load the student.csv files into python memory"""
@@ -47,11 +50,15 @@ def load_student():
 
                     #Initialise dictionary
                     student[student_id] = {"first_name": first_name}
+                else:
+                    raise ValueError
 
             print("Students loaded")
             return student
     except FileNotFoundError: #Catch
         print("Students file not found")
+    except ValueError:
+        print("Columns exceeded (expected 2 columns)")
 
 def load_transaction():
     """Used to load the transactions.csv files into python memory"""
@@ -72,7 +79,11 @@ def load_transaction():
 
                     #Initialise dictionary
                     transaction[transaction_id] = {"date": date, "book_id": book_id, "student_id": student_id, "type": transaction_type}
+                else:
+                    raise ValueError
             print("Transactions loaded")
             return transaction
     except FileNotFoundError: #Catch
         print("Transaction file not found")
+    except ValueError:
+        print("Columns exceeded (expected 5 columns)")
