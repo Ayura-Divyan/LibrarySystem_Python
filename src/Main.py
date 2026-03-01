@@ -21,7 +21,7 @@ def load_book():
                     price = row[5]
 
                     #Initialise dictionary
-                    books[book_id] = {"title": title, "isbn": isbn, "copies": int(copies), "availability": float(availability), "price": price}
+                    books[book_id] = {"title": title, "isbn": isbn, "copies": int(copies), "availability": availability, "price": float(price)}
 
             print("Books loaded")
     except FileNotFoundError: #Catch
