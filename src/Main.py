@@ -24,3 +24,9 @@ def load_book():
             print("Books loaded")
     except FileNotFoundError: #Catch
         print("Books file not found")
+
+#Start script
+if __name__ == "__main__":
+    load_book()
+
+    print(books)
