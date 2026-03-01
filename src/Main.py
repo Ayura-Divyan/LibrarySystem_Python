@@ -60,7 +60,7 @@ def load_transaction():
             next(reader) #Skips the header row
 
             for row in reader:
-                if len(row) == 2:
+                if len(row) == 5:
                     #Initialise the rows to separate indexes
                     transaction_id = row[0]
                     date = row[1]
