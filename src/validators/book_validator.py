@@ -1,3 +1,5 @@
+#This module is used to validate the input data for a book
+
 def isbn_valid(isbn):
     """
     Validates ISBN according to International ISBN Standard.
@@ -41,7 +43,25 @@ def copy_valid(copies):
     """
     copies = str(copies)
 
-    if copies.isdigit() and int(copies) <= 2:
+    if copies.isdigit() and (2 >= int(copies) >= 0):
+        return True
+    else:
+        return False
+
+def price_valid(price):
+    """
+    Validates the price of a book
+    :param price:
+    :return:
+    """
+    price = str(price)
+
+    price_parts = price.split(".") #Creates a list that's split at the decimal point
+
+    if len(price_parts) != 2:
+        return False
+
+    if price_parts[0].isdigit() and price_parts[1].isdigit() and (len(price_parts[1]) == 2):
         return True
     else:
         return False
