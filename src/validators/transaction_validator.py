@@ -12,3 +12,9 @@ def date_validator(date):
         return True
     except ValueError:
         return False
+
+def type_validator(type_value):
+    if type_value == 1 or type_value == 2:
+        return True
+    else:
+        return False
