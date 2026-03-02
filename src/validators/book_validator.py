@@ -1,10 +1,10 @@
-def isbn_valid(value):
+def isbn_valid(isbn):
     """
-    Validates ISBN number according to International ISBN Standard.
-    :param value:
+    Validates ISBN according to International ISBN Standard.
+    :param isbn:
     :return:
     """
-    digits = str(value).replace("-", "").replace(" ", "") #Cleaning out the isbn
+    digits = str(isbn).replace("-", "").replace(" ", "") #Cleaning out the isbn
 
     if len(digits) != 13 or not digits.isdigit():
         return False
@@ -32,3 +32,16 @@ def title_valid(title):
         return False
     else:
         return True
+
+def copy_valid(copies):
+    """
+    Validates the number of copies of a book
+    :param copies:
+    :return:
+    """
+    copies = str(copies)
+
+    if copies.isdigit() and int(copies) <= 2:
+        return True
+    else:
+        return False
