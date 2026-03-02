@@ -21,3 +21,14 @@ def isbn_valid(value):
             total += int(digit) * 3
 
     return total % 10 == 0
+
+def title_valid(title):
+    """
+    Validates the book title
+    :param title:
+    :return:
+    """
+    if len(title) > 20 and not title.isalpha(): #Title has to contain only letters with a max length of 20
+        return False
+    else:
+        return True
