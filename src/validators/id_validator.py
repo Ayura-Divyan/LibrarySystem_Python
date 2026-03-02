@@ -13,25 +13,18 @@ def is_unique(id_value, csv_file_name):
             next(reader)
             for row in reader:
                 if id_value in row:
-                    raise ValueError #If the id already exists in the csv file it will raise the error
-            return True
+                    return False #If the id already exists in the csv file it will raise the error return false
     except FileNotFoundError:
         print(f"Error: File '{csv_file_name}' could be not found.")
-    except ValueError:
-        print(f"Error: {id_value} is not unique")
 
 def booking_id_validator(booking_id):
     """
-    Checks if the characters consists of two letters and two digits
+    Checks if the characters consists of two letters, two digits and the length is four digits.
     :param booking_id:
     :return:
     """
     booking_id = str(booking_id)
-    try:
-        if len(booking_id) == 4 and booking_id[:2].isalpha() and booking_id[-2:].isdigit():
-            return True
-        else:
-            raise ValueError #If the id doesn't meet the validation it will raise the error
-    except ValueError:
-        print(f"Error: {booking_id} is not a valid booking id.")
-
+    if len(booking_id) == 4 and booking_id[:2].isalpha() and booking_id[-2:].isdigit():
+        return True
+    else:
+       return False #If the id doesn't meet the validation it return False
