@@ -28,3 +28,16 @@ def booking_id_validator(booking_id):
         return True
     else:
        return False #If the id doesn't meet the validation it return False
+
+def student_id_validator(student_id):
+    """
+    Checks if the student id is eight digits.
+    :param student_id:
+    :return:
+    """
+    student_id = str(student_id) #Convert to string so that it can be parsed for the len and .isdigit
+
+    if student_id.isdigit() and len(student_id) == 8:
+        return True
+    else:
+        return False
