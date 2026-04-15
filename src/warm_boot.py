@@ -28,6 +28,7 @@ def load_csv_data(filename, primary_field, expected_columns):
                 # Extract the ID to use as the dictionary key
                 item_id = row.pop(primary_field)
                 data_dict[item_id] = row
+            print(f"Loaded {len(data_dict)} items from {filename}.")
             return data_dict
 
     except FileNotFoundError:
@@ -54,4 +55,16 @@ def save_csv_data(filename, data_dict, primary_field):
     first_element_id = next(iter(data_dict))
     fieldnames = [primary_field] + list(data_dict[first_element_id].keys())
 
-    with open(filepath, mode="w", newline='') as csvfile:
+    # Write file
+    try:
+        with open(filepath, mode="w", newline='') as csvfile:
+            csv_writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+            csv_writer.writeheader() # Writes header row
+
+            for item_id, details in data_dict.items():
+                row = details.copy() # Creates copy of details to prevent data in memory to be changed
+                row['item_id'] = item_id
+                csv_writer.writerow(row)
+            print(f"Saved {len(data_dict)} items to {filename}.")
+    except Exception as e:
+        print(f"An unexpected error occurred saving {filename}: {e}")
