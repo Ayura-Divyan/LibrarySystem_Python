@@ -30,3 +30,10 @@ def add_book(book_dict):
             print("Error: Invalid book title. Please try again.")
             continue
         break # If the title passes all the validation the while loop breaks
+
+    while True:
+        num_copies = input("Enter number of copies: ")
+        if not validators.book_validator.copy_valid(num_copies):
+            print("Error: Invalid number of copies. Please try again.")
+            continue
+        break # If the number of copies passes all the validation the while loop breaks
