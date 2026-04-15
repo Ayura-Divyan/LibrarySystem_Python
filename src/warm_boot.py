@@ -4,13 +4,13 @@ import os
 DATA_DIR = '../data/'
 
 
-def load_csv_data(filename, key_field, expected_columns):
+def load_csv_data(filename, primary_field, expected_columns):
     """
     Loads data from CSV file
     :param filename:
-    :param key_field:
+    :param primary_field:
     :param expected_columns:
-    :return :
+    :return data_dict:
     """
     data_dict = {}
     filepath = os.path.join(DATA_DIR, filename)
@@ -26,7 +26,7 @@ def load_csv_data(filename, key_field, expected_columns):
                     continue
 
                 # Extract the ID to use as the dictionary key
-                item_id = row.pop(key_field)
+                item_id = row.pop(primary_field)
                 data_dict[item_id] = row
             return data_dict
 
@@ -35,3 +35,23 @@ def load_csv_data(filename, key_field, expected_columns):
     except Exception as e:
         print(f"An unexpected error occurred loading {filename}: {e}")
     return {}
+
+def save_csv_data(filename, data_dict, primary_field):
+    """
+    Saves data into CSV file
+    :param filename:
+    :param data_dict:
+    :return:
+    """
+    filepath = os.path.join(DATA_DIR, filename)
+
+    # Handles if there is no data in the dictionary
+    if not data_dict:
+        print(f"Error: No data to save for {filename}")
+        return
+
+    # Getting the headers
+    first_element_id = next(iter(data_dict))
+    fieldnames = [primary_field] + list(data_dict[first_element_id].keys())
+
+    with open(filepath, mode="w", newline='') as csvfile:
