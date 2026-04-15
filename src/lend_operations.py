@@ -31,3 +31,17 @@ def issue_book(books, students, transactions):
             print("Error: Invalid date format. Please try again.")
             continue
         break
+
+    # Generate a new Transaction ID
+    new_transaction_id = f"T{len(transactions) + 1:03}"
+
+    # Add to dictionary
+    transactions[new_transaction_id] = {
+        "date":date_str,
+        "book_id": book_id,
+        "student_id": student_id,
+        "type": "1"
+    }
+
+    # Reduce the number of available copies
+    books[book_id]["availability"] -= 1
