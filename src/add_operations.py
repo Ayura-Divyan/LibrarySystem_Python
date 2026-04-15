@@ -37,3 +37,12 @@ def add_book(book_dict):
             print("Error: Invalid number of copies. Please try again.")
             continue
         break # If the number of copies passes all the validation the while loop breaks
+
+    available_copies = num_copies
+
+    while True:
+        price = input("Enter price of the book: ")
+        if not validators.book_validator.price_valid(price):
+            print("Error: Invalid price. Please try again.")
+            continue
+        break # If the number of copies passes all the validation the while loop breaks
