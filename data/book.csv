@@ -1,4 +1,4 @@
-Book id,ISBN-13 Number,Title,Copies,Available,Price
+book_id,isbn,title,copies,availability,price
 CS10,978-01-31103-62-7,Programming,2,2,45.50
 PH25,978-03-06406-15-7,Physics,1,1,120.00
 MT99,978-31-61484-10-0,Calculus,2,2,89.99
