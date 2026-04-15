@@ -7,10 +7,8 @@ transaction = {}
 
 #Start script
 if __name__ == "__main__":
-    books = load_book()
-    student = load_student()
-    transaction = load_transaction()
+    books = load_csv_data('../data/book.csv', 'book_id', 6)
+    students = load_csv_data('student.csv', 'student_id', 2)
+    transactions = load_csv_data('transactions.csv', 'transaction_id', 5)
 
-    print(books)
-    print(student)
-    print(transaction)
+    print(transactions)
