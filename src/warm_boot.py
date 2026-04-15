@@ -1,38 +1,42 @@
 import csv
+import os
 
-#Initialised dictionaries to load the data to
-books = {}
-student = {}
-transaction = {}
+# Base csv relative file directory
+DATA_DIR = "../data/"
+
+def _load_base_data(filename, primary_header, expected_columns):
+    """
+    Handles loading data from a CSV file
+    :param filename:
+    :param primary_header:
+    :param expected_columns:
+    :return:
+    """
+    data_dict = {}
+    filepath = os.path.join(DATA_DIR, filename)
+
+    try:
+        with open(filepath, mode="r", encoding="utf-8", newline='') as csv_file:
+            csv_reader = csv.DictReader(csv_file)
+            for row in csv_reader:
+                if len(row) != expected_columns:
+                    continue
+
+                # Extract the ID to use as the main dictionary key
+                item_id = row.pop(primary_header)
+                data_dict[item_id] = row
+            return data_dict
+    except FileNotFoundError:
+        print(f"Error: {filename} not found.")
+        return {}
 
 def load_book():
     """Used to load the book.csv files into python memory"""
-    try:
-        with open('../data/book.csv', encoding="utf-8") as csvfile:
-            reader = csv.reader(csvfile) #Loads the csv file into a variable
+    # Maps the CSV header names to your preferred dictionary keys
+    raw_data = _load_base_data("book.csv", "Book id", 6)
 
-            next(reader) #Skips the header row
-
-            for row in reader:
-                #Initialise the rows to separate indexes
-                if len(row) == 6:
-                    book_id = row[0]
-                    isbn = row[1]
-                    title = row[2]
-                    copies = row[3]
-                    availability = row[4]
-                    price = row[5]
-
-                    #Initialise dictionary
-                    books[book_id] = {"title": title, "isbn": isbn, "copies": int(copies), "availability": availability, "price": float(price)}
-                else:
-                    raise ValueError
-            print("Books loaded")
-            return books
-    except FileNotFoundError: #Catch
-        print("Books file not found")
-    except ValueError:
-        print("Columns exceeded (expected 6 columns)")
+    for booking_id, details in raw_data.items():
+        # Type
 
 def load_student():
     """Used to load the student.csv files into python memory"""
