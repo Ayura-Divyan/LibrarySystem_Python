@@ -11,19 +11,15 @@ def issue_book(books, students, transactions):
     """
     print("\n---Issue book---")
 
-    while True:  # Checks if the Book ID exists in the dictionary
-        book_id = input("Enter book id: ")
-        if book_id not in books:
-            print("Error: Invalid book ID. Please try again.")
-            continue
-        break
+    book_id = input("Enter book id: ")
+    if book_id not in books:
+        print("Error: Invalid book ID.")
+        return
 
-    while True:  # Checks if the student ID exists in the dictionary
-        student_id = input("Enter student ID: ")
-        if student_id not in students:
-            print("Error: Invalid student ID. Please try again.")
-            continue
-        break
+    student_id = input("Enter student ID: ")
+    if student_id not in students:
+        print("Error: Invalid student ID.")
+        return
 
     # Multiple copy issuance check
     for transaction_id, details in transactions.items():
@@ -53,3 +49,35 @@ def issue_book(books, students, transactions):
 
     # Reduce the number of available copies
     books[book_id]["availability"] -= 1
+
+    return transactions
+
+
+def return_book(books, students, transactions):
+    print("\n---Return book---")
+
+    # Validate IDs
+    book_id = input("Enter book id: ")
+    if book_id not in books:
+        print("Error: Invalid book ID.")
+        return
+
+    student_id = input("Enter student ID: ")
+    if student_id not in students:
+        print("Error: Invalid student ID.")
+        return
+
+    # Find the Active Issue
+    found_transaction = None
+    for trans_id, details in transactions.items():
+        if (details["book_id"] == book_id and
+                details["student_id"] == student_id and
+                details["type"] == "1"):
+            found_transaction = details
+            break
+
+    if found_transaction:
+        found_transaction["type"] = "2"
+        books[book_id]["availability"] += 1
+    else:
+        print("Error: No active issue record found for this student and book.")
