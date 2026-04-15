@@ -54,6 +54,13 @@ def issue_book(books, students, transactions):
 
 
 def return_book(books, students, transactions):
+    """
+    Used to return books from students
+    :param books:
+    :param students:
+    :param transactions:
+    :return:
+    """
     print("\n---Return book---")
 
     # Validate IDs
