@@ -1,6 +1,14 @@
 from datetime import datetime
+import validators
 
 def issue_book(books, students, transactions):
+    """
+    Used to issue books to students
+    :param books:
+    :param students:
+    :param transactions:
+    :return:
+    """
     print("\n---Issue book---")
 
     while True:  # Checks if the Book ID exists in the dictionary
