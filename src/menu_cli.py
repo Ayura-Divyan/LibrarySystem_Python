@@ -65,9 +65,9 @@ def main_menu(books, students, transactions):
             # Trigger your warm_boot save functions here
             save_csv_data('book.csv', books, 'book_id')
             save_csv_data('student.csv', students, 'student_id')
-            save_csv_data('transactions.csv', transactions, 'transaction_id')
+            save_csv_data('transaction.csv', transactions, 'transaction_id')
             print("System shutting down. Goodbye.")
-            break  # Exits the infinite loop, ending the program
+            break  # Exits the loop, ending the program
 
         else:
             print("Error: Invalid choice. Please select a number from 1 to 5.")

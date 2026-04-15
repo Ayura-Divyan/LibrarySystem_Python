@@ -60,6 +60,7 @@ def add_book(book_dict):
         "price": float(price)
     }
 
+    print("Book added successfully.")
     return book_dict
 
 def add_student(student_dict):
@@ -81,7 +82,7 @@ def add_student(student_dict):
     while True: # Input first name
         first_name = input("Enter first name: ")
 
-        if not validators.string_validator.first_name_valid(first_name):
+        if not validators.student_validator.name_validator(first_name):
             print("Error: Invalid first name. Please try again.")
             continue
         break
@@ -89,4 +90,5 @@ def add_student(student_dict):
     student_dict[student_id] = {
         "first_name": first_name
     }
+    print("Student added successfully.")
     return student_dict

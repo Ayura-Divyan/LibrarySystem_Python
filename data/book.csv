@@ -1,6 +1,2 @@
 book_id,isbn,title,copies,availability,price
-CS10,978-01-31103-62-7,Programming,2,2,45.50
-PH25,978-03-06406-15-7,Physics,1,1,120.00
-MT99,978-31-61484-10-0,Calculus,2,2,89.99
-EN01,978-01-40449-13-6,Literature,2,2,14.25
-BI55,978-03-21558-23-7,Biology,1,1,105.00
+AD24,978-0-306-40615-7,Henry,2,1,3200.2
