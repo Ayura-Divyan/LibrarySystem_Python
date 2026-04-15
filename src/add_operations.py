@@ -15,11 +15,18 @@ def add_book(book_dict):
         if not validators.id_validator.booking_id_validator(book_id):
             print("Error: Invalid booking ID. Please try again.")
             continue
-        break #If the booking id passes all the validation the while loop breaks
+        break # If the booking id passes all the validation the while loop breaks
 
     while True: # Input ISBN
         isbn = input("Enter ISBN: ")
         if not validators.book_validator.isbn_valid(isbn):
             print("Error: Invalid ISBN. Please try again.")
             continue
-        break
+        break # If the ISBN passes all the validation the while loop breaks
+
+    while True: # Input Tile
+        book_title = input("Enter book title: ")
+        if not validators.book_validator.title_valid(book_title):
+            print("Error: Invalid book title. Please try again.")
+            continue
+        break # If the title passes all the validation the while loop breaks
