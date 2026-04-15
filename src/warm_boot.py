@@ -1,93 +1,83 @@
 import csv
-import os
 
-# Base csv relative file directory
-DATA_DIR = "../data/"
+# Initialised dictionaries to load the data to
+books = {}
+student = {}
+transaction = {}
 
-def _load_base_data(filename, primary_header, expected_columns):
-    """
-    Handles loading data from a CSV file
-    :param filename:
-    :param primary_header:
-    :param expected_columns:
-    :return:
-    """
-    data_dict = {}
-    filepath = os.path.join(DATA_DIR, filename)
-
-    try:
-        with open(filepath, mode="r", encoding="utf-8", newline='') as csv_file:
-            csv_reader = csv.DictReader(csv_file)
-            for row in csv_reader:
-                if len(row) != expected_columns:
-                    continue
-
-                # Extract the ID to use as the main dictionary key
-                item_id = row.pop(primary_header)
-                data_dict[item_id] = row
-            return data_dict
-    except FileNotFoundError:
-        print(f"Error: {filename} not found.")
-        return {}
 
 def load_book():
-    """Used to load the book.csv files into python memory"""
-    # Maps the CSV header names to your preferred dictionary keys
-    raw_data = _load_base_data("book.csv", "Book id", 6)
-
-    for booking_id, details in raw_data.items():
-        # Type
-
-def load_student():
-    """Used to load the student.csv files into python memory"""
+    """Used to load the book.csv files into python memory using DictReader"""
     try:
-        with open('../data/student.csv', encoding="utf-8") as csvfile:
-            reader = csv.reader(csvfile) #Loads the csv file into a variable
-
-            next(reader) #Skips the header row
+        with open('../data/book.csv', mode="r", encoding="utf-8", newline='') as csvfile:
+            # DictReader uses the first row of the CSV as keys
+            reader = csv.DictReader(csvfile)
 
             for row in reader:
-                if len(row) == 2:
-                    #Initialise the rows to separate indexes
-                    student_id = row[0]
-                    first_name = row[1]
+                # Instead of row[0], use the header name 'book_id'
+                book_id = row['book_id']
 
-                    #Initialise dictionary
-                    student[student_id] = {"first_name": first_name}
-                else:
-                    raise ValueError
+                # Assign values using header names
+                books[book_id] = {
+                    "title": row['title'],
+                    "isbn": row['isbn'],
+                    "copies": int(row['copies']),
+                    "availability": row['availability'],
+                    "price": float(row['price'])
+                }
+
+            print("Books loaded")
+            return books
+    except FileNotFoundError:
+        print("Books file not found")
+    except KeyError as e:
+        print(f"Missing column in book.csv: {e}")
+    except Exception as e:
+        print(f"Unexpected error: {e}")
+
+
+def load_student():
+    """Used to load the student.csv files into python memory using DictReader"""
+    try:
+        with open('../data/student.csv', mode="r", encoding="utf-8", newline='') as csvfile:
+            reader = csv.DictReader(csvfile)
+
+            for row in reader:
+                # Use the header name 'student_id'
+                student_id = row['student_id']
+
+                student[student_id] = {
+                    "first_name": row['first_name']
+                }
 
             print("Students loaded")
             return student
-    except FileNotFoundError: #Catch
+    except FileNotFoundError:
         print("Students file not found")
-    except ValueError:
-        print("Columns exceeded (expected 2 columns)")
+    except KeyError as e:
+        print(f"Missing column in student.csv: {e}")
+
 
 def load_transaction():
-    """Used to load the transactions.csv files into python memory"""
+    """Used to load the transactions.csv files into python memory using DictReader"""
     try:
-        with open('../data/transactions.csv', encoding="utf-8") as csvfile:
-            reader = csv.reader(csvfile) #Loads the csv file into a variable
-
-            next(reader) #Skips the header row
+        with open('../data/transactions.csv', mode="r", encoding="utf-8", newline='') as csvfile:
+            reader = csv.DictReader(csvfile)
 
             for row in reader:
-                if len(row) == 5:
-                    #Initialise the rows to separate indexes
-                    transaction_id = row[0]
-                    date = row[1]
-                    book_id = row[2]
-                    student_id = row[3]
-                    transaction_type = row[4]
+                # Use the header name 'transaction_id'
+                transaction_id = row['transaction_id']
 
-                    #Initialise dictionary
-                    transaction[transaction_id] = {"date": date, "book_id": book_id, "student_id": student_id, "type": transaction_type}
-                else:
-                    raise ValueError
+                transaction[transaction_id] = {
+                    "date": row['date'],
+                    "book_id": row['book_id'],
+                    "student_id": row['student_id'],
+                    "type": row['type']
+                }
+
             print("Transactions loaded")
             return transaction
-    except FileNotFoundError: #Catch
+    except FileNotFoundError:
         print("Transaction file not found")
-    except ValueError:
-        print("Columns exceeded (expected 5 columns)")
+    except KeyError as e:
+        print(f"Missing column in transactions.csv: {e}")
