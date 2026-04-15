@@ -6,7 +6,7 @@ import validators
 def add_book(book_dict):
     print("\n---Add a book---")
 
-    while True:
+    while True: # Input booking ID
         book_id = input("Enter book id: ")
         if  not validators.id_validator.is_unique(book_id, "book.csv"):
             print("Error: Booking ID already exists. Please try again.")
@@ -16,3 +16,10 @@ def add_book(book_dict):
             print("Error: Invalid booking ID. Please try again.")
             continue
         break #If the booking id passes all the validation the while loop breaks
+
+    while True: # Input ISBN
+        isbn = input("Enter ISBN: ")
+        if not validators.book_validator.isbn_valid(isbn):
+            print("Error: Invalid ISBN. Please try again.")
+            continue
+        break
