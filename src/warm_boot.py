@@ -20,6 +20,11 @@ def load_csv_data(filename, primary_field, expected_columns):
             # DictReader uses the first row (header) as keys for each row dictionary
             reader = csv.DictReader(csvfile)
 
+            # Checks if the file is empty
+            if os.path.getsize(filepath) == 0:
+                print(f"Warning: File {filepath} has no data. Loading blank database")
+                return {}
+
             for row_idx, row in enumerate(reader, start=2):
                 if len(row) != expected_columns:
                     print(f"Skipping line {row_idx} in {filename}: Incorrect column count.")

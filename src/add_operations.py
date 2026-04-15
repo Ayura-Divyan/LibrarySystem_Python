@@ -62,7 +62,7 @@ def add_book(book_dict):
 
     return book_dict
 
-def add_students(student_dict):
+def add_student(student_dict):
     """
     Adds students to the book dictionary
     :param student_dict:
