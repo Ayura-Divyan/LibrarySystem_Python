@@ -1,6 +1,6 @@
 #This module has methods for the for adding data to the database
 
-import csv
+from datetime import datetime
 import validators
 
 def add_book(book_dict):
@@ -13,7 +13,7 @@ def add_book(book_dict):
 
     while True: # Input booking ID
         book_id = input("Enter book id: ")
-        if  not validators.id_validator.is_unique(book_id, "book.csv"):
+        if  not validators.id_validator.is_unique(book_id, "../data/book.csv"):
             print("Error: Booking ID already exists. Please try again.")
             continue
 
@@ -89,3 +89,4 @@ def add_students(student_dict):
     student_dict[student_id] = {
         "first_name": first_name
     }
+    return student_dict
