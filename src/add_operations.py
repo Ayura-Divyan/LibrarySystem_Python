@@ -46,3 +46,13 @@ def add_book(book_dict):
             print("Error: Invalid price. Please try again.")
             continue
         break # If the number of copies passes all the validation the while loop breaks
+
+    book_dict[book_id] = {
+        "isbn": isbn,
+        "title": book_title,
+        "copies": int(num_copies),
+        "availability": int(available_copies),
+        "price": float(price)
+    }
+
+    return book_dict
