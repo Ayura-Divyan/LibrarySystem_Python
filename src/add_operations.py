@@ -4,6 +4,11 @@ import csv
 import validators
 
 def add_book(book_dict):
+    """
+    Adds a book to the book dictionary
+    :param book_dict:
+    :return book_dict:
+    """
     print("\n---Add a book---")
 
     while True: # Input booking ID
@@ -56,3 +61,31 @@ def add_book(book_dict):
     }
 
     return book_dict
+
+def add_students(student_dict):
+    """
+    Adds students to the book dictionary
+    :param student_dict:
+    :return student_dict:
+    """
+    print("\n---Add students---")
+
+    while True: # Input student ID
+        student_id = input("Enter student ID: ")
+
+        if not validators.id_validator.is_unique(student_id, "student.csv"):
+            print("Error: Student ID already exists. Please try again.")
+            continue
+        break
+
+    while True: # Input first name
+        first_name = input("Enter first name: ")
+
+        if not validators.string_validator.first_name_valid(first_name):
+            print("Error: Invalid first name. Please try again.")
+            continue
+        break
+
+    student_dict[student_id] = {
+        "first_name": first_name
+    }
