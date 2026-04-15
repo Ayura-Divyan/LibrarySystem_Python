@@ -89,3 +89,21 @@ def add_students(student_dict):
     student_dict[student_id] = {
         "first_name": first_name
     }
+    return student_dict
+
+def issue_book(books, students, transactions):
+    print("\n---Issue book---")
+
+    while True: # Checks if the Book ID Exists in the dictionary
+        book_id = input("Enter book id: ")
+        if book_id not in books:
+            print("Error: Invalid book ID. Please try again.")
+            continue
+        break
+
+    while True:
+        student_id = input("Enter student ID: ")
+        if student_id not in students:
+            print("Error: Invalid student ID. Please try again.")
+            continue
+        break
