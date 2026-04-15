@@ -53,3 +53,30 @@ def issue_book(books, students, transactions):
 
     # Reduce the number of available copies
     books[book_id]["availability"] -= 1
+
+def return_book(books, students, transactions):
+    print("\n---Return book---")
+
+    while True:  # Checks if the Book ID exists in the dictionary
+        book_id = input("Enter book id: ")
+        if book_id not in books:
+            print("Error: Invalid book ID. Please try again.")
+            continue
+        break
+
+    while True:  # Checks if the student ID exists in the dictionary
+        student_id = input("Enter student ID: ")
+        if student_id not in students:
+            print("Error: Invalid student ID. Please try again.")
+            continue
+        break
+
+    # Checks if the book has already been returned
+    for transaction_id, details in transactions.items():
+        if details["book_id"] == book_id and details["type"] == "2":
+            print("Error: Book has already been returned.")
+            return
+    # Changing transaction type to return
+    for transaction_id, details in transactions.items():
+        if details["book_id"] == book_id and details["student_id"] == student_id:
+            details["type"] = "2"
