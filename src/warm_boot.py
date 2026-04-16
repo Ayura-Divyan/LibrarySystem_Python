@@ -20,6 +20,11 @@ def load_csv_data(filename, primary_field, expected_columns):
             # DictReader uses the first row (header) as keys for each row dictionary
             reader = csv.DictReader(csvfile)
 
+            # Checks if the file is empty
+            if os.path.getsize(filepath) == 0:
+                print(f"Warning: File {filepath} has no data. Loading blank database")
+                return {}
+
             for row_idx, row in enumerate(reader, start=2):
                 if len(row) != expected_columns:
                     print(f"Skipping line {row_idx} in {filename}: Incorrect column count.")
@@ -63,7 +68,7 @@ def save_csv_data(filename, data_dict, primary_field):
 
             for item_id, details in data_dict.items():
                 row = details.copy() # Creates copy of details to prevent data in memory to be changed
-                row['item_id'] = item_id
+                row[primary_field] = item_id
                 csv_writer.writerow(row)
             print(f"Saved {len(data_dict)} items to {filename}.")
     except Exception as e:

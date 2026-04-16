@@ -50,6 +50,7 @@ def issue_book(books, students, transactions):
     # Reduce the number of available copies
     books[book_id]["availability"] -= 1
 
+    print("Book issued successfully.")
     return transactions
 
 
@@ -85,6 +86,7 @@ def return_book(books, students, transactions):
 
     if found_transaction:
         found_transaction["type"] = "2"
-        books[book_id]["availability"] += 1
+        books[book_id]["availability"] = "1"
+        print("Book returned successfully.")
     else:
         print("Error: No active issue record found for this student and book.")

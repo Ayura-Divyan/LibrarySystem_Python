@@ -10,12 +10,13 @@ def is_unique(id_value, csv_file_name):
     :return: Boolean to validate the value
     """
     try:
-        with open(f"../../data/{csv_file_name}", "r", encoding="utf-8") as csv_file:
+        with open(f"../data/{csv_file_name}", "r", encoding="utf-8",  newline='') as csv_file:
             reader = csv.reader(csv_file)
             next(reader)
             for row in reader:
                 if id_value in row:
                     return False #If the id already exists in the csv file it will raise the error return false
+        return True # If ID doesn't exist it will returnn true
     except FileNotFoundError:
         print(f"Error: File '{csv_file_name}' could be not found.")
 

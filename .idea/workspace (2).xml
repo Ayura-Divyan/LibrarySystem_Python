@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9a6bc2f4-5e0c-4aac-82dc-01aff6e6cb02" name="Changes" comment="Major bug fixes and logic fixes">
+      <change afterPath="$PROJECT_DIR$/src/book_operations.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/LibrarySystem_Python.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/LibrarySystemPython.iml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Ayura-Divyan&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Ayura-Divyan/CM1601-Programming-Coursework.git&quot;,
+    &quot;accountId&quot;: &quot;5e9ea002-1580-4826-a176-1ed7b19d1489&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="3AGKo766hK1DIxdOrI3QrSQaNi9" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.id_validator.executor&quot;: &quot;Run&quot;,
+    &quot;Python.lend_operations.executor&quot;: &quot;Run&quot;,
+    &quot;Python.library.executor&quot;: &quot;Run&quot;,
+    &quot;Python.warm_boot.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/menu&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\School\IIT\Stage 01\Semester 02\CM1601 - Pogramming Fundamentals\Coursework\LibrarySystem_Python\data" />
+      <recent name="D:\School\IIT\Stage 01\Semester 02\CM1601 - Pogramming Fundamentals\Coursework\LibrarySystem_Python\src" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-PY-252.26830.99" />
+        <option value="bundled-python-sdk-164cda30dcd9-0af03a5fa574-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.26830.99" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9a6bc2f4-5e0c-4aac-82dc-01aff6e6cb02" name="Changes" comment="" />
+      <created>1772213640884</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1772213640884</updated>
+      <workItem from="1772213642430" duration="978000" />
+      <workItem from="1772214648521" duration="1386000" />
+      <workItem from="1772261916755" duration="62000" />
+      <workItem from="1772345690798" duration="6193000" />
+      <workItem from="1772360710325" duration="7539000" />
+      <workItem from="1772428341931" duration="18453000" />
+      <workItem from="1772597851854" duration="206000" />
+      <workItem from="1773024423487" duration="95000" />
+      <workItem from="1773210107991" duration="130000" />
+      <workItem from="1773210263060" duration="594000" />
+      <workItem from="1776234483003" duration="1902000" />
+      <workItem from="1776240490418" duration="259000" />
+      <workItem from="1776240772865" duration="88000" />
+      <workItem from="1776240881987" duration="30789000" />
+      <workItem from="1776311868613" duration="22000" />
+      <workItem from="1776314910940" duration="1259000" />
+    </task>
+    <task id="LOCAL-00004" summary="load_book function complete">
+      <option name="closed" value="true" />
+      <created>1772346130419</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1772346130419</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Script start">
+      <option name="closed" value="true" />
+      <created>1772346309230</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1772346309230</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Directory fixed">
+      <option name="closed" value="true" />
+      <created>1772346597735</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1772346597735</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Header skip fix">
+      <option name="closed" value="true" />
+      <created>1772346741778</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1772346741778</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Availability and price data type fixed">
+      <option name="closed" value="true" />
+      <created>1772351952675</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1772351952675</updated>
+    </task>
+    <task id="LOCAL-00009" summary="transactions.csv data and student.csv data added">
+      <option name="closed" value="true" />
+      <created>1772354543821</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1772354543821</updated>
+    </task>
+    <task id="LOCAL-00010" summary="transactions.csv data and student.csv data added">
+      <option name="closed" value="true" />
+      <created>1772354643773</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1772354643773</updated>
+    </task>
+    <task id="LOCAL-00011" summary="load_student function created">
+      <option name="closed" value="true" />
+      <created>1772355915886</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1772355915886</updated>
+    </task>
+    <task id="LOCAL-00012" summary="load_student function created v2">
+      <option name="closed" value="true" />
+      <created>1772355966357</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1772355966357</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Transaction loader created, transaction id added to transactions.csv">
+      <option name="closed" value="true" />
+      <created>1772356914735</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1772356914735</updated>
+    </task>
+    <task id="LOCAL-00014" summary="load_transaction len checker fixed">
+      <option name="closed" value="true" />
+      <created>1772357089838</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1772357089838</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Separate method made for warm boot">
+      <option name="closed" value="true" />
+      <created>1772362542302</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1772362542303</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Column error catcher">
+      <option name="closed" value="true" />
+      <created>1772363288450</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1772363288450</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Main.py refactored to library.py">
+      <option name="closed" value="true" />
+      <created>1772363419028</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1772363419028</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Validator package created">
+      <option name="closed" value="true" />
+      <created>1772364260160</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1772364260160</updated>
+    </task>
+    <task id="LOCAL-00019" summary="is_unique module completed">
+      <option name="closed" value="true" />
+      <created>1772366585528</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1772366585528</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Booking ID validator">
+      <option name="closed" value="true" />
+      <created>1772425957122</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1772425957122</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Booking validator and unique validator tested">
+      <option name="closed" value="true" />
+      <created>1772429573292</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1772429573292</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Try catchers fixed">
+      <option name="closed" value="true" />
+      <created>1772429755121</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1772429755121</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Student ID Validator created">
+      <option name="closed" value="true" />
+      <created>1772430590410</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1772430590410</updated>
+    </task>
+    <task id="LOCAL-00024" summary="isbn validator created">
+      <option name="closed" value="true" />
+      <created>1772433821093</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1772433821093</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Logic fixed and checksum algorithm added">
+      <option name="closed" value="true" />
+      <created>1772450165246</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1772450165246</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Title check added">
+      <option name="closed" value="true" />
+      <created>1772450491071</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1772450491071</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Copy check added">
+      <option name="closed" value="true" />
+      <created>1772451487597</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1772451487597</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Price checker added">
+      <option name="closed" value="true" />
+      <created>1772452326337</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1772452326343</updated>
+    </task>
+    <task id="LOCAL-00029" summary="First name check added">
+      <option name="closed" value="true" />
+      <created>1772453373664</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1772453373664</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Date checker added">
+      <option name="closed" value="true" />
+      <created>1772454196531</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1772454196531</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Type checker added">
+      <option name="closed" value="true" />
+      <created>1772454445363</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1772454445363</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Booking ID input validation created">
+      <option name="closed" value="true" />
+      <created>1772458811859</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1772458811859</updated>
+    </task>
+    <task id="LOCAL-00033" summary="ISBN input validation completed">
+      <option name="closed" value="true" />
+      <created>1776242018790</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1776242018790</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Book title validation completed">
+      <option name="closed" value="true" />
+      <created>1776242304344</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1776242304344</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Copy numbers validation complete">
+      <option name="closed" value="true" />
+      <created>1776242571003</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1776242571003</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Price validation complete">
+      <option name="closed" value="true" />
+      <created>1776243400220</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1776243400220</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Load base data method created">
+      <option name="closed" value="true" />
+      <created>1776250509994</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1776250509994</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Final warm boot fix">
+      <option name="closed" value="true" />
+      <created>1776255257077</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1776255257077</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Add book complete">
+      <option name="closed" value="true" />
+      <created>1776256055965</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1776256055965</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Add student complete">
+      <option name="closed" value="true" />
+      <created>1776256764695</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1776256764695</updated>
+    </task>
+    <task id="LOCAL-00041" summary="CSV File fixed">
+      <option name="closed" value="true" />
+      <created>1776257854016</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1776257854016</updated>
+    </task>
+    <task id="LOCAL-00042" summary="issue input checks complete">
+      <option name="closed" value="true" />
+      <created>1776258310337</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1776258310337</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Date input validation">
+      <option name="closed" value="true" />
+      <created>1776269461368</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1776269461368</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Lend file created">
+      <option name="closed" value="true" />
+      <created>1776269599893</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1776269599893</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Book issue method created">
+      <option name="closed" value="true" />
+      <created>1776270309225</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1776270309225</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Doc string created">
+      <option name="closed" value="true" />
+      <created>1776270657524</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1776270657524</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Return method completed">
+      <option name="closed" value="true" />
+      <created>1776271686995</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1776271686995</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Return method fixed">
+      <option name="closed" value="true" />
+      <created>1776272071146</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1776272071146</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Get fieldnames logic. Doc string added to return method">
+      <option name="closed" value="true" />
+      <created>1776273587341</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1776273587341</updated>
+    </task>
+    <task id="LOCAL-00050" summary="csv saving method complete">
+      <option name="closed" value="true" />
+      <created>1776273869239</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1776273869240</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Main menu CLI complete">
+      <option name="closed" value="true" />
+      <created>1776280770245</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1776280770245</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Major bug fixes and logic fixes">
+      <option name="closed" value="true" />
+      <created>1776283250119</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1776283250119</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Price checker added" />
+    <MESSAGE value="First name check added" />
+    <MESSAGE value="Date checker added" />
+    <MESSAGE value="Type checker added" />
+    <MESSAGE value="Booking ID input validation created" />
+    <MESSAGE value="ISBN input validation completed" />
+    <MESSAGE value="Book title validation completed" />
+    <MESSAGE value="Copy numbers validation complete" />
+    <MESSAGE value="Price validation complete" />
+    <MESSAGE value="Load base data method created" />
+    <MESSAGE value="Final warm boot fix" />
+    <MESSAGE value="Add book complete" />
+    <MESSAGE value="Add student complete" />
+    <MESSAGE value="CSV File fixed" />
+    <MESSAGE value="issue input checks complete" />
+    <MESSAGE value="Date input validation" />
+    <MESSAGE value="Lend file created" />
+    <MESSAGE value="Book issue method created" />
+    <MESSAGE value="Doc string created" />
+    <MESSAGE value="Return method completed" />
+    <MESSAGE value="Return method fixed" />
+    <MESSAGE value="Get fieldnames logic. Doc string added to return method" />
+    <MESSAGE value="csv saving method complete" />
+    <MESSAGE value="Main menu CLI complete" />
+    <MESSAGE value="Major bug fixes and logic fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Major bug fixes and logic fixes" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/LibrarySystem_Python$library.coverage" NAME="library Coverage Results" MODIFIED="1776283104185" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/LibrarySystem_Python$Main.coverage" NAME="Main Coverage Results" MODIFIED="1772363334504" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/LibrarySystem_Python$lend_operations.coverage" NAME="lend_operations Coverage Results" MODIFIED="1776283049310" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/LibrarySystem_Python$warm_boot.coverage" NAME="warm_boot Coverage Results" MODIFIED="1776281063981" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/LibrarySystem_Python$id_validator.coverage" NAME="id_validator Coverage Results" MODIFIED="1772430503282" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/validators" />
+  </component>
+</project>
