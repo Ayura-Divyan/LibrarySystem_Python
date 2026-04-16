@@ -1,15 +1,17 @@
-from warm_boot import *
-from menu_cli import *
+import warm_boot
+from menu_cli import main_menu
 
-#Initialised dictionaries to load the data to
-books = {}
-student = {}
-transaction = {}
+print("Initializing Library Management System...")
 
-#Start script
-if __name__ == "__main__":
-    books = load_csv_data("book.csv", "book_id", 6)
-    students = load_csv_data("student.csv", "student_id", 2)
-    transactions = load_csv_data("transaction.csv", "transaction_id", 5)
+# Dictionary Headers
+book_headers = ['book_id', 'isbn', 'title', 'copies', 'availability', 'price']
+student_headers = ['student_id', 'first_name']
+trans_headers = ['transaction_id', 'date', 'book_id', 'student_id', 'type']
 
-    main_menu(books, students, transactions)
+# Load dat
+books = warm_boot.load_csv_data('book.csv', 'book_id', book_headers)
+students = warm_boot.load_csv_data('student.csv', 'student_id', student_headers)
+transactions = warm_boot.load_csv_data('transaction.csv', 'transaction_id', trans_headers)
+
+# Start the main menu
+main_menu(books, students, transactions)
