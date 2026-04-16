@@ -1,7 +1,7 @@
 from add_operations import *
 from lend_operations import *
 from warm_boot import save_csv_data
-import book_operations as bop
+import book_operations as boop
 
 def main_menu(books, students, transactions):
     """
@@ -64,7 +64,7 @@ def book_menu(books):
         print("------------------------------------------")
         print("1. Add Book")
         print("2. Edit book")
-        print("3. Delete book (Not implemented)")
+        print("3. Delete book")
         print("4. View All Book Information (Not implemented)")
         print("5. Return to Main Menu")
 
@@ -79,8 +79,11 @@ def book_menu(books):
             break
         elif book_selection == 2:
             edit_id = input("Enter book ID to edit: ").upper()
-            bop.edit_book(edit_id, books)
+            boop.edit_book(edit_id, books)
             break
+        elif book_selection == 3:
+            delete_id = input("Enter book ID to delete: ").upper()
+            boop.delete_book(delete_id, books)
         elif book_selection == 5:
             return
         else:

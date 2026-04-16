@@ -39,3 +39,11 @@ def edit_book(search_id, books):
     books[search_id]['price'] = new_price
 
     print(f"Success: Book {search_id} has been updated!")
+
+def delete_book(search_id, books):
+    if search_id not in books:
+        print("Book not found")
+        menu_cli.book_menu(books)
+
+    books.pop(search_id)
+    print(f"Success: Book {search_id} has been deleted!")
