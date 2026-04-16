@@ -53,27 +53,36 @@ def main_menu(books, students, transactions):
             print("Error: Invalid choice. Please select a number from 1 to 5.")
 
 def book_menu(books):
-    print("\n------------------------------------------")
-    print("Book Operations")
-    print("------------------------------------------")
-    print("1. Add Book")
-    print("2. Edit book")
-    print("3. Delete book (Not implemented)")
-    print("4. View All Book Information (Not implemented)")
-    print("5. Return to Main Menu")
+    """
+    Runs the Book Menu CLI
+    :param books:
+    :return:
+    """
+    while True:
+        print("\n------------------------------------------")
+        print("Book Operations")
+        print("------------------------------------------")
+        print("1. Add Book")
+        print("2. Edit book")
+        print("3. Delete book (Not implemented)")
+        print("4. View All Book Information (Not implemented)")
+        print("5. Return to Main Menu")
 
-    try:
-        book_selection = int(input("\nEnter your choice: "))
-    except ValueError:
-        print("Error: Please enter a valid number.")
-        return
+        try:
+            book_selection = int(input("\nEnter your choice: "))
+        except ValueError:
+            print("Error: Please enter a valid number.")
+            continue
 
-    if book_selection == 1:
-        add_book(books)
-    elif book_selection == 2:
-        edit_id = input("Enter book ID to edit: ")
-        bop.edit_book(edit_id, books)
-    elif book_selection == 5:
-        return
-    else:
-        print("Feature under development. Returning to main menu.")
+        if book_selection == 1:
+            add_book(books)
+            break
+        elif book_selection == 2:
+            edit_id = input("Enter book ID to edit: ").upper()
+            bop.edit_book(edit_id, books)
+            break
+        elif book_selection == 5:
+            return
+        else:
+            print("Feature under development. Returning to main menu.")
+            break
