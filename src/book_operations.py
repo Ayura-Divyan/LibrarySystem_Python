@@ -1,7 +1,11 @@
 from validators import book_validator
+import menu_cli
 
 def edit_book(search_id, books):
-    print(f"---Editing book {search_id}---")
+    if search_id not in books:
+        print("Book not found")
+        menu_cli.book_menu(books)
+    print(f"\n---Editing book {search_id}---\n")
     while True:  # Input new ISBN
         new_isbn = input("Enter ISBN: ")
         if not book_validator.isbn_valid(new_isbn):
@@ -16,8 +20,16 @@ def edit_book(search_id, books):
             continue
         break  # If the title passes all the validation the while loop breaks
 
+    while True: # Input New Price
+        new_price = input("Enter price of the book: ")
+        if not book_validator.price_valid(new_price):
+            print("Error: Invalid price. Please try again.")
+            continue
+        break # If the number of copies passes all the validation the while loop breaks
 
-    for book_in, details in books.items():
-        if details['book_id'] == search_id:
-            details['book_title'] = new_book_title
-            details['book_isbn'] = new_isbn
+
+    books[search_id]['isbn'] = new_isbn
+    books[search_id]['title'] = new_book_title
+    books[search_id]['price'] = new_price
+
+    print(f"Success: Book {search_id} has been updated!")

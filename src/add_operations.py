@@ -9,7 +9,7 @@ def add_book(book_dict):
     :param book_dict:
     :return book_dict:
     """
-    print("\n---Add a book---")
+    print("\n---Add a book---\n")
 
     while True: # Input booking ID
         book_id = input("Enter book id: ")
@@ -45,7 +45,7 @@ def add_book(book_dict):
 
     available_copies = num_copies
 
-    while True:
+    while True: # Input Price
         price = input("Enter price of the book: ")
         if not validators.book_validator.price_valid(price):
             print("Error: Invalid price. Please try again.")
@@ -69,7 +69,7 @@ def add_student(student_dict):
     :param student_dict:
     :return student_dict:
     """
-    print("\n---Add students---")
+    print("\n---Add students---\n")
 
     while True: # Input student ID
         student_id = input("Enter student ID: ")
