@@ -47,3 +47,29 @@ def delete_book(search_id, books):
 
     books.pop(search_id)
     print(f"Success: Book {search_id} has been deleted!")
+
+
+def view_books(books):
+    print("\n-----------------------------------------------------------------------------------------")
+    print("LIBRARY INVENTORY".center(85))
+    print("\n-----------------------------------------------------------------------------------------")
+
+    if not books:
+        print("Error: No books currently exist in the database.")
+        print("\n-----------------------------------------------------------------------------------------")
+        return
+
+    print(f"{'BOOK ID':<10} | {'TITLE':<25} | {'ISBN':<15} | {'COPIES':<8} | {'STOCK':<8} | {'PRICE':<10}")
+    print("\n-----------------------------------------------------------------------------------------")
+
+    for book_id, details in books.items():
+        title = details['title']
+        isbn = details['isbn']
+        copies = details['copies']
+        availability = details['availability']
+        price = details['price']
+
+        if len(title) > 22:
+            title = title[:19] + "..."
+
+        print(f"{book_id:<10} | {title:<25} | {isbn:<15} | {copies:<8} | {availability:<8} | ${price:<9}")

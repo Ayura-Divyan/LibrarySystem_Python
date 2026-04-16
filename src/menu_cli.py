@@ -65,7 +65,7 @@ def book_menu(books):
         print("1. Add Book")
         print("2. Edit book")
         print("3. Delete book")
-        print("4. View All Book Information (Not implemented)")
+        print("4. View All Book Information")
         print("5. Return to Main Menu")
 
         try:
@@ -84,6 +84,8 @@ def book_menu(books):
         elif book_selection == 3:
             delete_id = input("Enter book ID to delete: ").upper()
             boop.delete_book(delete_id, books)
+        elif book_selection == 4:
+            boop.view_books(books)
         elif book_selection == 5:
             return
         else:
