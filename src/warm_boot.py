@@ -3,44 +3,56 @@ import os
 
 DATA_DIR = '../data/'
 
+import csv
+import os
 
-def load_csv_data(filename, primary_field, expected_columns):
+DATA_DIR = '../data/'
+
+
+def load_csv_data(filename, primary_field, fieldnames):
     """
-    Loads data from CSV file
+    Loads the data from the csv file
     :param filename:
     :param primary_field:
-    :param expected_columns:
-    :return data_dict:
+    :param fieldnames:
+    :return:
     """
     data_dict = {}
     filepath = os.path.join(DATA_DIR, filename)
 
+    # Check if the file doesn't exist OR is completely empty (0 bytes)
+    if not os.path.exists(filepath) or os.path.getsize(filepath) == 0:
+        print(f"Warning: {filename} is empty or missing. Initializing blank database.")
+        try:
+            with open(filepath, mode="w", encoding="utf-8", newline='') as csvfile:
+                writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+                writer.writeheader()
+            return {}  # Return an empty dictionary to the main program
+        except Exception as e:
+            print(f"Error initializing {filename}: {e}")
+            return {}
+
     try:
         with open(filepath, mode="r", encoding="utf-8", newline='') as csvfile:
-            # DictReader uses the first row (header) as keys for each row dictionary
             reader = csv.DictReader(csvfile)
-
-            # Checks if the file is empty
-            if os.path.getsize(filepath) == 0:
-                print(f"Warning: File {filepath} has no data. Loading blank database")
-                return {}
+            expected_columns = len(fieldnames)
 
             for row_idx, row in enumerate(reader, start=2):
                 if len(row) != expected_columns:
                     print(f"Skipping line {row_idx} in {filename}: Incorrect column count.")
                     continue
 
-                # Extract the ID to use as the dictionary key
                 item_id = row.pop(primary_field)
                 data_dict[item_id] = row
+
             print(f"Loaded {len(data_dict)} items from {filename}.")
             return data_dict
 
-    except FileNotFoundError:
-        print(f"Error: The file {filename} was not found in {DATA_DIR}")
     except Exception as e:
         print(f"An unexpected error occurred loading {filename}: {e}")
-    return {}
+        return {}
+
+
 
 def save_csv_data(filename, data_dict, primary_field):
     """

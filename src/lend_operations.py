@@ -11,9 +11,12 @@ def issue_book(books, students, transactions):
     """
     print("\n---Issue book---")
 
-    book_id = input("Enter book id: ")
+    book_id = input("Enter book id: ").upper()
     if book_id not in books:
         print("Error: Invalid book ID.")
+        return
+    elif int(books[book_id]["availability"]) < 1:
+        print("Error: There are no copies of this book available.")
         return
 
     student_id = input("Enter student ID: ")
@@ -30,11 +33,12 @@ def issue_book(books, students, transactions):
 
     # Date input and validation
     while True:
-        date_str = input("Enter book date (DD/MM/YYYY): ")
-        if not datetime.strptime(date_str, "%d/%m/%Y"):
-            print("Error: Invalid date format. Please try again.")
-            continue
-        break
+        date_str = input("Enter issue date (DD/MM/YYYY): ")
+        try:
+            datetime.strptime(date_str, "%d/%m/%Y")
+            break
+        except ValueError:
+            print("Error: Invalid date format. Please use DD/MM/YYYY.")
 
     # Generate a new Transaction ID
     new_transaction_id = f"T{len(transactions) + 1:03}"
@@ -51,7 +55,6 @@ def issue_book(books, students, transactions):
     books[book_id]["availability"] -= 1
 
     print("Book issued successfully.")
-    return transactions
 
 
 def return_book(books, students, transactions):
@@ -65,7 +68,7 @@ def return_book(books, students, transactions):
     print("\n---Return book---")
 
     # Validate IDs
-    book_id = input("Enter book id: ")
+    book_id = input("Enter book id: ").upper()
     if book_id not in books:
         print("Error: Invalid book ID.")
         return
@@ -75,6 +78,13 @@ def return_book(books, students, transactions):
         print("Error: Invalid student ID.")
         return
 
+    # Date input and validation
+    while True:
+        date_str = input("Enter return date (DD/MM/YYYY): ")
+        if not datetime.strptime(date_str, "%d/%m/%Y"):
+            print("Error: Invalid date format. Please try again.")
+            continue
+        break
     # Find the Active Issue
     found_transaction = None
     for trans_id, details in transactions.items():
@@ -86,7 +96,8 @@ def return_book(books, students, transactions):
 
     if found_transaction:
         found_transaction["type"] = "2"
-        books[book_id]["availability"] = "1"
+        found_transaction["date"] = date_str
+        books[book_id]["availability"] = int(books[book_id]["availability"]) + 1
         print("Book returned successfully.")
     else:
         print("Error: No active issue record found for this student and book.")
