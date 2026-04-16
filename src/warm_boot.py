@@ -11,8 +11,11 @@ DATA_DIR = '../data/'
 
 def load_csv_data(filename, primary_field, fieldnames):
     """
-    Loads data from CSV file. If the file is missing or empty, it creates a
-    new file and writes the header row automatically.
+    Loads the data from the csv file
+    :param filename:
+    :param primary_field:
+    :param fieldnames:
+    :return:
     """
     data_dict = {}
     filepath = os.path.join(DATA_DIR, filename)
