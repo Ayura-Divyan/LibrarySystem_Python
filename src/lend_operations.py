@@ -15,6 +15,9 @@ def issue_book(books, students, transactions):
     if book_id not in books:
         print("Error: Invalid book ID.")
         return
+    elif int(books[book_id]["availability"]) < 1:
+        print("Error: There are no copies of this book available.")
+        return
 
     student_id = input("Enter student ID: ")
     if student_id not in students:
@@ -31,10 +34,11 @@ def issue_book(books, students, transactions):
     # Date input and validation
     while True:
         date_str = input("Enter issue date (DD/MM/YYYY): ")
-        if not datetime.strptime(date_str, "%d/%m/%Y"):
-            print("Error: Invalid date format. Please try again.")
-            continue
-        break
+        try:
+            datetime.strptime(date_str, "%d/%m/%Y")
+            break
+        except ValueError:
+            print("Error: Invalid date format. Please use DD/MM/YYYY.")
 
     # Generate a new Transaction ID
     new_transaction_id = f"T{len(transactions) + 1:03}"
@@ -51,7 +55,6 @@ def issue_book(books, students, transactions):
     books[book_id]["availability"] -= 1
 
     print("Book issued successfully.")
-    return transactions
 
 
 def return_book(books, students, transactions):
@@ -93,8 +96,8 @@ def return_book(books, students, transactions):
 
     if found_transaction:
         found_transaction["type"] = "2"
-        books[book_id]["availability"] = "1"
-        books[book_id]["date"] = date_str
+        found_transaction["date"] = date_str
+        books[book_id]["availability"] = int(books[book_id]["availability"]) + 1
         print("Book returned successfully.")
     else:
         print("Error: No active issue record found for this student and book.")
