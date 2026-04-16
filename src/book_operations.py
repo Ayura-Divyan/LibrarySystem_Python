@@ -2,6 +2,12 @@ from validators import book_validator
 import menu_cli
 
 def edit_book(search_id, books):
+    """
+    This is to edit the information of a book
+    :param search_id:
+    :param books:
+    :return:
+    """
     if search_id not in books:
         print("Book not found")
         menu_cli.book_menu(books)
@@ -14,7 +20,7 @@ def edit_book(search_id, books):
         break  # If the ISBN passes all the validation the while loop breaks
 
     while True:  # Input new Tile
-        new_book_title = input("Enter book title: ")
+        new_book_title = input("Enter book title: ").upper()
         if not book_validator.title_valid(new_book_title):
             print("Error: Invalid book title. Please try again.")
             continue

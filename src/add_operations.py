@@ -12,7 +12,7 @@ def add_book(book_dict):
     print("\n---Add a book---\n")
 
     while True: # Input booking ID
-        book_id = input("Enter book id: ")
+        book_id = input("Enter book id: ").upper()
         if  not validators.id_validator.is_unique(book_id, "../data/book.csv"):
             print("Error: Booking ID already exists. Please try again.")
             continue
@@ -30,7 +30,7 @@ def add_book(book_dict):
         break # If the ISBN passes all the validation the while loop breaks
 
     while True: # Input Tile
-        book_title = input("Enter book title: ")
+        book_title = input("Enter book title: ").upper()
         if not validators.book_validator.title_valid(book_title):
             print("Error: Invalid book title. Please try again.")
             continue
@@ -80,7 +80,7 @@ def add_student(student_dict):
         break
 
     while True: # Input first name
-        first_name = input("Enter first name: ")
+        first_name = input("Enter first name: ").upper()
 
         if not validators.student_validator.name_validator(first_name):
             print("Error: Invalid first name. Please try again.")
