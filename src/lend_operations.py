@@ -81,10 +81,11 @@ def return_book(books, students, transactions):
     # Date input and validation
     while True:
         date_str = input("Enter return date (DD/MM/YYYY): ")
-        if not datetime.strptime(date_str, "%d/%m/%Y"):
-            print("Error: Invalid date format. Please try again.")
-            continue
-        break
+        try:
+            datetime.strptime(date_str, "%d/%m/%Y")
+            break
+        except ValueError:
+            print("Error: Invalid date format. Please use DD/MM/YYYY.")
     # Find the Active Issue
     found_transaction = None
     for trans_id, details in transactions.items():
