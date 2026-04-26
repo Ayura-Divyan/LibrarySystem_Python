@@ -89,5 +89,4 @@ def book_menu(books):
         elif book_selection == 5:
             return
         else:
-            print("Feature under development. Returning to main menu.")
-            break
+            print("Error: Invalid choice. Please select a number from 1 to 5.")
