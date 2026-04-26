@@ -73,3 +73,21 @@ def view_books(books):
             title = title[:19] + "..."
 
         print(f"{book_id:<10} | {title:<25} | {isbn:<15} | {copies:<8} | {availability:<8} | ${price:<9}")
+
+def search_book(search_id, books):
+    if search_id not in books:
+        print("Book not found")
+        menu_cli.book_menu(books)
+    print(f"\n---Searching book {search_id}---\n")
+
+    print(f"{'BOOK ID':<10} | {'TITLE':<25} | {'ISBN':<15} | {'COPIES':<8} | {'STOCK':<8} | {'PRICE':<10}")
+    print("\n-----------------------------------------------------------------------------------------")
+    title = books[search_id]['title']
+    isbn = books[search_id]['isbn']
+    copies = books[search_id]['copies']
+    availability = books[search_id]['availability']
+    price = books[search_id]['price']
+    if len(title) > 22:
+        title = books[search_id]["title"][:19] + "..."
+
+    print(f"{search_id:<10} | {title:<25} | {isbn:<15} | {copies:<8} | {availability:<8} | ${price:<9}")
