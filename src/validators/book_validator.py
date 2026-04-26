@@ -30,6 +30,7 @@ def title_valid(title):
     :param title:
     :return:
     """
+    title = title.replace(" ", "")
     if len(title) > 20 or not title.isalpha(): #Title has to contain only letters with a max length of 20
         return False
     else:
