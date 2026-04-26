@@ -74,8 +74,8 @@ def add_student(student_dict):
     while True: # Input student ID
         student_id = input("Enter student ID: ")
 
-        if not validators.id_validator.is_unique(student_id, "student.csv"):
-            print("Error: Student ID already exists. Please try again.")
+        if not validators.id_validator.is_unique(student_id, "student.csv") or not validators.id_validator.student_id_validator(student_id):
+            print("Error: Invalid Student ID. Please try again.")
             continue
         break
 
