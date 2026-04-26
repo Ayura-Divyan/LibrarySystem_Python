@@ -69,9 +69,6 @@ def view_books(books):
         availability = details['availability']
         price = details['price']
 
-        if len(title) > 22:
-            title = title[:19] + "..."
-
         print(f"{book_id:<10} | {title:<25} | {isbn:<15} | {copies:<8} | {availability:<8} | ${price:<9}")
 
 def search_book(search_id, books):
@@ -87,7 +84,5 @@ def search_book(search_id, books):
     copies = books[search_id]['copies']
     availability = books[search_id]['availability']
     price = books[search_id]['price']
-    if len(title) > 22:
-        title = books[search_id]["title"][:19] + "..."
 
     print(f"{search_id:<10} | {title:<25} | {isbn:<15} | {copies:<8} | {availability:<8} | ${price:<9}")
