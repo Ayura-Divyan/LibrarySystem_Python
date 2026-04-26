@@ -1,5 +1,6 @@
 from add_operations import *
 from lend_operations import *
+from src.book_operations import search_book
 from warm_boot import save_csv_data
 import book_operations as boop
 import plot_graph as pg
@@ -71,7 +72,8 @@ def book_menu(books):
         print("2. Edit book")
         print("3. Delete book")
         print("4. View All Book Information")
-        print("5. Return to Main Menu")
+        print("5. Search a Book")
+        print("6. Return to Main Menu")
 
         try:
             book_selection = int(input("\nEnter your choice: "))
@@ -92,6 +94,9 @@ def book_menu(books):
         elif book_selection == 4:
             boop.view_books(books)
         elif book_selection == 5:
+            search_id = input("Enter book ID to search: ").upper()
+            boop.search_book(search_id, books)
+        elif book_selection == 6:
             return
         else:
             print("Error: Invalid choice. Please select a number from 1 to 5.")
