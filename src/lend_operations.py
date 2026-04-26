@@ -52,7 +52,8 @@ def issue_book(books, students, transactions):
     }
 
     # Reduce the number of available copies
-    books[book_id]["availability"] -= 1
+    books[book_id]["availability"] = int(books[book_id]["availability"]) - 1
+
 
     print("Book issued successfully.")
 
