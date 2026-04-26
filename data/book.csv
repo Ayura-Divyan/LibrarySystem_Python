@@ -1,2 +1,6 @@
 book_id,isbn,title,copies,availability,price
-AS12,978-3-16-148410-0,Bit,2,1,12.0
+BK01,9780131103627,C Programming Language,5,3,45.50
+BK02,9780262033848,Intro to Algorithms,3,2,85.00
+BK03,9781491912058,R for Data Science,4,4,40.00
+BK04,9780134685991,Effective Java,2,1,55.20
+BK05,9781593279288,Python Crash Course,6,5,30.00

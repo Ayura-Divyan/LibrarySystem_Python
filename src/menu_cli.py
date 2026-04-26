@@ -2,6 +2,7 @@ from add_operations import *
 from lend_operations import *
 from warm_boot import save_csv_data
 import book_operations as boop
+import plot_graph as pg
 
 def main_menu(books, students, transactions):
     """
@@ -20,7 +21,8 @@ def main_menu(books, students, transactions):
         print("2. Add Student")
         print("3. Issue Book")
         print("4. Return Book")
-        print("5. Save and Exit")
+        print("5. Create trend graph")
+        print("6. Save and Exit")
 
         try:
             selection = int(input("\nEnter your choice: "))
@@ -41,6 +43,9 @@ def main_menu(books, students, transactions):
             return_book(books, students, transactions)
 
         elif selection == 5:
+            pg.create_trend_graph(transactions)
+
+        elif selection == 6:
             print("\nSaving database...")
             # Trigger your warm_boot save functions here
             save_csv_data('book.csv', books, 'book_id')
